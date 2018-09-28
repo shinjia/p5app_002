@@ -2,8 +2,8 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
 		xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id	    = "tw.whatmake.shinjia.p5app.s002"
-		versionCode = "6" 
-		version     = "0.1.5" >
+		versionCode = "7" 
+		version     = "0.1.6" >
  
 	<name>p5app S002</name>
  
