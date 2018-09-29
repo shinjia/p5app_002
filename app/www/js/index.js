@@ -4,7 +4,7 @@ var bc;
 
 function setup()
 {
-  createCanvas(displayWidth,displayHeight);
+  createCanvas(windowWidth, windowHeight);
   background(0);
   
   bc = color(255, 150, 150);
@@ -15,29 +15,24 @@ function draw()
 {
   noStroke();
   fill(255, 100, 100);
-  ellipse(width/2, 200, 100, 100);
-//   background(bc);
-  
-//   noStroke();
-//   fill(random(10, 120));
-//   for(var i=0; i<500; i++)
-//   {
-//     ellipse(random(width), random(height), 2, 2);
-//   }
-  
-  // for(var i=0; i<5; i++)
-  // {
-  // fill(random(255), random(255), random(255));
-  //   ellipse(50+random(width)-100, 50+random(height)-100, 80, 80);
-  // }
+  rect((width/4)*0, 50, (width/4)*0.9, 30);
 }
 
+
+function mousePressed()
+{
+   // for web test  
+  noStroke();
+  fill(255, 100, 100);
+  rect((width/4)*1, 50, (width/4)*0.9, 30);
+  return false;
+}
 
 function touchStarted()
 {
   noStroke();
-  fill(155, 200, 100);
-  ellipse(width/2, 300, 100, 100);
+  fill(255, 100, 100);
+  rect((width/4)*2, 50, (width/4)*0.9, 30);
   
   // prevent default
   return false;
@@ -45,9 +40,11 @@ function touchStarted()
 
 function touchMoved() 
 {
-  // noStroke();
-  // fill(155, 100, 200);
-  // ellipse(width/2, 500, 100, 100);
+  background(bc);
+  
+  noStroke();
+  fill(255, 100, 100);
+  rect((width/4)*3, 50, (width/4)*0.9, 30);
   
   // background(bc);
   //print(touches.length);
@@ -63,15 +60,17 @@ function touchMoved()
   
   for (var i=0; i<touches.length; i++)
   {
-    noStroke();
-    fill(255, 100, 100);
+    strokeWeight(2);
+    stroke(255);
+    fill(255, 200, 100);
     ellipse(touches[i].x,touches[i].y,bs,bs);
-    
-    noFill();
-    stroke(255, 0, 0);
-    ellipse(mouseX, mouseY, bs+i*10, bs+i*10);
   }
 
+  
+  stroke(255, 0, 0);
+  noFill();
+  ellipse(mouseX, mouseY, bs+10, bs+10);
+  
   // prevent default
   return false;
 }
@@ -82,10 +81,4 @@ function touchEnded()
   background(bc);
   // prevent default
   return false;
-}
-
-
-function windowResized()
-{
-  resizeCanvas(displayWidth, displayHeight);
 }
