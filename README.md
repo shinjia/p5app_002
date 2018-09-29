@@ -3,6 +3,7 @@
 ## 版本修改
 
 **0.2**
+- 程式改由 GitHub 控管
 - 方向僅限直式
 - 將各互動事件以橫條顯示出來 (draw, mousePress, touchStart, touchMove)
 
