@@ -1,5 +1,15 @@
 # p5app_002
 
+## 版本修改
+
+**0.2**
+- 方向僅限直式
+- 將各互動事件以橫條顯示出來 (draw, mousePress, touchStart, touchMove)
+
+**0.1**
+- 從 web 轉 App
+
+
 ## 準備檔案
 
 - [x] config.xml 打包設定檔
